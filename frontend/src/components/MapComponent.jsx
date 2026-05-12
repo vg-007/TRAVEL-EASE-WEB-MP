@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import MarkerClusterGroup from 'react-leaflet-cluster';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -294,11 +293,6 @@ const MapComponent = ({ onAttractionsFound, onLocationUpdate }) => {
               </Popup>
           </Marker>
 
-          <MarkerClusterGroup 
-            chunkedLoading 
-            maxClusterRadius={40}
-            disableClusteringAtZoom={16}
-          >
             {displayedPlaces.map((place) => (
               <Marker
                 key={place.id}
@@ -340,7 +334,7 @@ const MapComponent = ({ onAttractionsFound, onLocationUpdate }) => {
                 </Popup>
               </Marker>
             ))}
-          </MarkerClusterGroup>
+
 
         </MapContainer>
       </div>
