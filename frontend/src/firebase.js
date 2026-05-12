@@ -5,13 +5,13 @@ import { getFirestore } from 'firebase/firestore';
 // Your web app's Firebase configuration
 // IMPORTANT: Replace this config with your actual Firebase project configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBPb7P-7H6-IOImpjevneC4F6NEt6bTWdU",
-  authDomain: "travelease-web.firebaseapp.com",
-  projectId: "travelease-web",
-  storageBucket: "travelease-web.firebasestorage.app",
-  messagingSenderId: "595610985175",
-  appId: "1:595610985175:web:e6d4b66aa95bb524460692",
-  measurementId: "G-3GXLBBPSGJ"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
